@@ -1,0 +1,292 @@
+*{padding: 0; margin: 0;}
+:root{
+    --purple:#3f51b5;
+    --light-purple:#e5e9ff;
+    --white:#fff;
+    --milky:#eaeaea;
+    --grey:#444;
+    --grey-hover:#0000000f;
+    --shadow:#0000002e;
+    --panel-bg:#f7f7f7;
+    --btn-copy-border:#b5b5b5;
+}
+.pmp_nightmode{
+    --purple:#d4d4d4;
+    --light-purple:#343b5f;
+    --white:#33373b;
+    --milky:#00000045;
+    --grey:#f7f7f7;
+    --grey-hover:#00000040;
+    --shadow:#0000002e;
+    --panel-bg:#2e3033;
+    --btn-copy-border:#00000054;
+}
+.menu-bar {
+    background: #3f51b5;
+    display: flex;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+.nightmode-button {
+    background: url("../images/night-switch.jpg") var(--light-purple) no-repeat;
+    background-position: -41px;
+    border: 1px solid #a4b2ff;
+    height: 25px;
+    width: 45px;
+    border-radius: 12px;
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 58px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+.pmp_nightmode .nightmode-button {
+    background: url("../images/night-switch.jpg") var(--light-purple) no-repeat;
+    background-position: -9px;
+    border: 1px solid #2f2f2f;
+    height: 25px;
+    width: 45px;
+    border-radius: 12px;
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 58px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+.night-switch {
+    height: 27px;
+    width: 27px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    box-shadow: 0 0 4px 1px #0000006b;
+    transition: .3s ease-in;
+}
+.pmp_nightmode .night-switch {
+    height: 27px;
+    width: 27px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: 17px;
+    box-shadow: 0 0 4px 1px #0000006b;
+    transition: .3s ease-in;
+}
+.ui-left-panel {
+    width: 250px;
+    background: var(--panel-bg);
+    border-right: 1px solid var(--milky);
+    height: calc(100vh - 60px);
+    padding: 15px 0;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    overflow-y: auto;
+}
+.ui-right-panel {
+    padding: 15px;
+    width: calc(100vw - 255px);
+    height: calc(100vh - 60px);
+    display: inline-block;
+    position: absolute;
+    left: 251px;
+    overflow-y: auto;
+}
+.ui-left-panel p {
+    font-size: 15px;
+    color: var(--grey);
+    font-weight: 600;
+    padding: 0 15px 10px;
+}
+.ui-left-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.ui-left-panel ul li a{
+    padding: 9px 15px 9px 11px;
+    border-left: 4px solid transparent;
+    display: block;
+    color: var(--grey);
+    background:transparent;
+    transition: .2s ease-in;
+    cursor: pointer;
+    font-size: 14px;
+}
+.ui-left-panel ul li a.active {
+    border-color: var(--purple);
+    background: var(--light-purple);
+    color: var(--grey);
+}
+.ui-left-panel ul li a:hover{
+    background:var(--grey-hover);
+    transition: .2s ease-in;
+}
+section {
+    margin-top: 60px;
+}
+.logo-container {
+    width: 150px;
+    padding: 20px 15px;
+}
+.menu-container {
+    width: calc(100% - 150px);
+    position: relative;
+}
+.logo-container a h4 {
+    color: transparent;
+    font-size: 21px;
+    background: url(../images/logo.svg);
+}
+.menu-container ul {
+    list-style: none;
+}
+.menu-container .level1 {
+    display: flex;
+}
+.menu-container .level2 {
+    position: absolute;
+    width: max-content;
+    background: var(--white);
+    padding-bottom: 5px;
+    border-radius: 0 0 7px 7px;
+    box-shadow: 0px 2px 7px var(--shadow);
+}
+.menu-container ul li a {
+    padding: 20px 15px;
+    font-size: 13px;
+    color: var(--white);
+    display: inline-block;
+}
+.pmp_nightmode .menu-container ul li a, .pmp_nightmode .help-box a{
+color:#fff;
+}
+.menu-container .level2 li a {
+    color: var(--grey);
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    transition:.2s ease-in;
+}
+.menu-container .level2 li a:hover {
+    background: var(--grey-hover);
+    color: var(--grey);
+    transition:.2s ease-in;
+}
+.menu-container .menu-item.active{
+    background: var(--purple);
+    color:var(--white);
+}
+a.toggle-submenu .icon-ddarrow {
+    margin: 2px 6px;
+}
+.help-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.help-box a {
+    padding: 20px 15px;
+    display: inline-block;
+    color: var(--white);
+}
+.me-dropdown{margin: 0;}
+.me-droplist, .me-droplist2 {
+    display: none;
+}
+.show-submenu, .show-submenu2 {
+    display: block;
+}
+/*text styles*/
+.sample-item h4 {
+    font-size: 16px;
+    border-bottom: 1px solid var(--milky);
+    padding-bottom: 10px;
+    color: var(--purple);
+}
+.view-box, .code-view-box {
+    padding: 10px;
+    border: 1px solid var(--milky);
+    border-radius: 7px;
+    margin-top: 25px;
+    background: var(--white);
+    min-height: 96px;
+}
+.code-view-box {
+    background:var(--panel-bg);
+    position: relative;
+    padding-top: 0;
+}
+.view-box iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.view-box.width-50 {
+    margin-right: 13px;
+}
+.code-tab {
+    padding: 10px 0;
+    margin-bottom: 3px;
+    background: var(--panel-bg);
+}
+.ui-html, .ui-css {
+    max-height: 375px;
+    overflow: auto;
+}
+.ui-instructions{
+    padding: 20px 0;
+}
+.ui-instructions p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.ui-instructions a{
+    color: var(--purple);
+    text-decoration: underline;
+}
+.code-tab span{
+    background: transparent;
+    color: var(--grey);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.code-tab span.active{
+    background: var(--purple);
+    color: var(--white);
+}
+span.icon-copy.code-copy {
+    float: right;
+    border: 1px solid var(--btn-copy-border);
+    padding: 4px 8px 1px;
+    background: transparent;
+}
+.code-tab span:hover:not(.code-tab span.active){
+    background: var(--grey-hover);
+    color:var(--grey);
+}
+.ui-hide{
+    display: none;
+}
+.sample-item{
+ margin-bottom: 30px;  
+ display: none; 
+}
+.pmp_nightmode pre{
+    background: transparent;
+    border-color:transparent !important;
+}

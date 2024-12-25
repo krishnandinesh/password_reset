@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Password Reset</title>
+    <link rel="stylesheet" type="text/css" href="css/pmp_style.css" />
+    <link rel="stylesheet" type="text/css" href="css/pmpmain.css" />
+    <link rel="stylesheet" href="font-icon/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/form-style.css" />
+    <link href="https://www.manageengine.com/privileged-session-management/help/css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="icon" href="./images/favicon.ico">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  
+  <script src="https://www.manageengine.com/privileged-session-management/help/js/perfect-scrollbar.jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapr pmp_merown">
+        <nav class="tpblueband">
+            <div class="tbwrap ">
+                <div class="logo hand">
+                    <img src="images/ps_logo.png?1654640682553" alt="logo" />
+                </div>
+
+                <div class="srbxselect">
+                    <div class="icon-search-dd hand" style="font-size: 20px" id="searchIco1"></div>
+
+                    <input type="text" placeholder="Search" class="srtxtbx" id="FRHost_Search" style="color: white" />
+                </div>
+
+                <ul class="tpbaiconwrap">
+                    <li class="pmpalicon">
+                        <a href=""><span class="icon-getting-started"></span></a>
+                    </li>
+                    <li class="pmpalicon">
+                        <a href=""><span class="icon-link"></span></a>
+                    </li>
+                    <div class="iconseparators"></div>
+                    <li class="pmpalicon">
+                        <a href=""><span class="icon-super-admin"></span></a>
+                    </li>
+                    <li class="pmpalicon">
+                        <a href=""><span class="icon-alarm"></span></a>
+                    </li>
+                    <li class="pmpalicon">
+                        <a href=""><span class="icon-mail"></span></a>
+                    </li>
+                    <div class="iconseparators"></div>
+                    <li class="pmpalicon">
+                        <a href=""><span class="icon-usr-logout"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sidebar-menu fixed">
+
+            <div class="custom-menu" id="custom-menu">
+                <ul class="ps-container ps-theme-default ps-active-y" id="pmpmenu-ul">
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-dashboard"></span>
+                            <span style="font-size: 10px; line-height: 10px">Dashboard</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a class="active"><span class="icon-computer"></span>
+                            <span style="font-size: 10px; line-height: 10px">Resources</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-resource-group"></span>
+                            <span style="font-size: 10px; line-height: 10px">Groups</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-autologon"></span>
+                            <span style="font-size: 10px; line-height: 10px">Connections</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-ssh"></span>
+                            <span style="font-size: 10px; line-height: 10px">SSH Keys</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-ssl-new"></span>
+                            <span style="font-size: 10px; line-height: 10px">Certificates</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-user1"></span>
+                            <span style="font-size: 10px; line-height: 10px">Users</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-settings-line"></span>
+                            <span style="font-size: 10px; line-height: 10px">Admin</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-audit1"></span>
+                            <span style="font-size: 10px; line-height: 10px">Audit</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-reports1"></span>
+                            <span style="font-size: 10px; line-height: 10px">Report</span></a>
+                    </li>
+                    <li class="sidebar-tooltip" style="position: relative">
+                        <a><span class="icon-ad-analytics"></span>
+                            <span style="font-size: 10px; line-height: 10px">Advanced Analytics</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="treeviewbg ps-container overflow">
+
+                <div class="discoveryHeader">Remote Password Reset
+                    <div class="hand icon-help icon_inline"></div>
+                </div>
+
+                <div class="list-group panel" id="resourceTypes">
+
+                    <ul style="list-style:none;">
+                        <li onclick="showHideSyncDetails('windows');" id="windows_li" class="bs_selected">
+                            <span class="spx hand">Windows</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('windowsdomain');" id="windowsdomain_li">
+                            <span class="spx hand">Windows Domain</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('linux');" id="linux_li">
+                            <span class="spx hand">Linux</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('mssql');" id="mssql_li">
+                            <span class="spx hand">MSSQL Server</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('ciscoios');" id="ciscoios_li">
+                            <span class="spx hand">Cisco IOS</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('hpprocurve');" id="hpprocurve_li">
+                            <span class="spx hand">HP ProCurve</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('netscreen');" id="netscreen_li">
+                            <span class="spx hand">NetScreen</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('mysql');" id="mysql_li">
+                            <span class="spx hand">MySQL Server</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('pgsql');" id="pgsql_li">
+                            <span class="spx hand">PostgreSQL Server</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('sybase');" id="sybase_li">
+                            <span class="spx hand">Sybase ASE</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('oracle');" id="oracle_li">
+                            <span class="spx hand">Oracle DB Server</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('ldapserver');" id="ldapserver_li">
+                            <span class="spx hand">LDAP Server</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('hpilo');" id="hpilo_li">
+                            <span class="spx hand">HP iLO</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('esxi');" id="esxi_li">
+                            <span class="spx hand">VMware ESXi</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('awsiam');" id="awsiam_li">
+                            <span class="spx hand">AWS IAM</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('gapps');" id="gapps_li">
+                            <span class="spx hand">Google Apps</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('office365');" id="office365_li">
+                            <span class="spx hand">Microsoft Azure</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('rackspace');" id="rackspace_li">
+                            <span class="spx hand">Rackspace</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('salesforce');" id="salesforce_li">
+                            <span class="spx hand">Salesforce</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('weblogic');" id="weblogic_li">
+                            <span class="spx hand">WebLogic</span>
+                        </li>
+                        <li onclick="showHideSyncDetails('CustomCli');" id="CustomCli_li">
+                            <span class="spx hand">SSH Command Sets</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div id="Password_View_Div_Id" class="tree_rightView" style="padding: 0px; margin-top: -10px; left: 351px;">
+
+                <div class="pageTitle" style="padding-top:13px; margin: -10px -25px 0px -20px;">
+
+                    <span class="elipseText sync_title" id="sync_title"
+                        style="width: 700px; line-height: normal; font-size:15px;">Configure Windows Password
+                        Reset</span>
+
+                </div>
+
+                <div id="bulkSyncDetailsApplicable" style="right: 0px; position: absolute; margin-top: 10px;">
+                    <span class="icon-computer icon_inline"></span>
+                    <div class="applicableResourceLink">View Selected Resource(s)</div>
+                </div>
+
+                <!-- FORM START -->
+
+                <div class="form_wrap form_scroll overflow" style="margin-top: 30px; ">
+
+                    <!-- Windows -->
+
+                    <div id="windows" class="">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="fieldName">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Windows Domain-->
+
+                    <div id="windowsdomain" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Resource Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <select>
+                                        <option value="0" disabled selected>[-Select-]</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <select>
+                                        <option value="0" disabled selected>[-Select-]</option>
+                                        <option value="1">Resource 1</option>
+                                        <option value="2">Resource 2</option>
+                                        <option value="3">Resource 3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- Linux -->
+
+                    <div id="linux" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right" for="filter4">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input type="radio" checked name="remotemode" value="ssh" id="sshr" class="hand"
+                                        onclick="telnetOptions();">
+                                    <label for="sshr" class="marr10">SSH</label>
+
+                                    <input type="radio" name="remotemode" value="telnet" id="tnl" class="hand"
+                                        onclick="telnetOptions();">
+                                    <label for="tnl">Telnet</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="fieldName" value="22">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">User Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="fieldName" value="$">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Landing Server
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select>
+                                        <option value="0" disabled selected>NONE</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-icon icon-info hand icon_inline" style="margin:3px 0 0 5px;"
+                                    onmouseout="UnTip(this)"
+                                    onmouseover="Tip('Use this Landing Server Profile to establish SSH/Telnet Connections',this)"
+                                    title="Use this Landing Server Profile to establish SSH/Telnet Connections">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Enable remote login for account associated with
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-4">
+                                    <input type="radio" checked name="Resource" id="SameResource" class="hand">
+                                    <label for="SameResource" class="marr10">Linux Resource</label>
+                                    <input type="radio" name="Resource" id="OtherResource" class="hand">
+                                    <label for="OtherResource">Other Resource</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" class="ui-autocomplete-input" name="normalaccount"
+                                        id="NormalAccount" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right" for="filter4">Authentication Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-6">
+                                    <input type="radio" checked name="authentication" value="passauth" id="passauth"
+                                        onclick="authOptions();">
+                                    <label for="passauth" class="hand marr10">Use Password Authentication</label>
+
+                                    <input type="radio" class="hideOnWD" name="authentication" value="keyauth"
+                                        id="keyauth" onclick="authOptions();">
+                                    <label for="keyauth" class="hideOnWD marr10">Use PKI Authentication</label>
+
+                                    <div class="hand form-icon icon-info icon_inline" style="margin:3px 0 0 5px;"
+                                        onmouseout="UnTip(this)"
+                                        onmouseover="Tip('Supported for SSH2 only. The corresponding public key should be present in the remote system under the remote login account, typically in a location like $HOME/.ssh/authorized_keys.',this)"
+                                        title="Supported for SSH2 only. The corresponding public key should be present in the remote system under the remote login account, typically in a location like $HOME/.ssh/authorized_keys.">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Privilege Elevation Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-4" style="margin-right:10px">
+                                    <input type="radio" checked name="elevationType" value="su" id="suroot"
+                                        onclick="elevationOption();">
+                                    <label for="suroot" class="hand marr10">'su' as root</label>
+
+                                    <input type="radio" name="elevationType" value="sudo" id="sudo"
+                                        onclick="elevationOption();">
+                                    <label for="sudo" class="hand">Use 'sudo'</label>
+
+                                    <div class="hand icon-info icon_inline" style="margin:3px 0 0 10px;"
+                                        onmouseout="UnTip(this)"
+                                        onmouseover="Tip('For remote password reset, PAM360 first logs in using the remote login account using the specified authentication method. Then, to be able to modify the password of any user account, privilege elevation is necessary. PAM360 can either \'su\' as root  or use \'sudo\' to execute the password reset commands. Note that the remote system\'s sudo configuration should allow the remote login account to execute the password reset command.',this)"
+                                        title="For remote password reset, PAM360 first logs in using the remote login account using the specified authentication method. Then, to be able to modify the password of any user account, privilege elevation is necessary. PAM360 can either 'su' as root  or use 'sudo' to execute the password reset commands. Note that the remote system's sudo configuration should allow the remote login account to execute the password reset command.">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row" style="margin-top: 10px;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="rootaccount" id="RootAccount" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root User Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="linux_rootuserprompt" id="linux_rootuserprompt" value="#"
+                                        validatemethod="isNotEmpty" errormsg="Please enter valid root user prompt.">
+                                </div>
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row" style="justify-content: center;">
+                                <div class="hand">
+                                    <input type="checkbox" name="removeEnter" id="lin_append"
+                                        style="margin: 10px 5px 0 0;">
+                                </div>
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="lin_append">Append enter command for execution
+                                        while doing password reset
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row" style="justify-content: center;">
+
+                                <div class="hand">
+                                    <input type="checkbox" name="hpswitch_startup_config" value="on"
+                                        id="lin_enable_startup" style="margin: 10px 5px 0 0;" class="hand">
+                                </div>
+
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="lin_enable_startup">Copy Password Changes
+                                        to the Startup Configuration
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- MSSQL Server -->
+                    <div id="mssql" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Instance Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="mssql_instanceName" id="mssql_instanceName">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">MS SQL Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input name="mssql_port" id="mssql_port" value="1433"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Connection Mode
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input id="connection_mode_nossl" type="radio" name="connection_mode" checked>
+                                    <label for="connection_mode_nossl" class="hand marr10">Non-SSL</label>
+
+                                    <input id="connection_mode_ssl" type="radio" name="connection_mode">
+                                    <label for="connection_mode_ssl" class="hand marr10">SSL</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=mysql_ssl','new_1',800,450,1,1)"
+                                        class="form-icon icon-help hand icon_inline" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document">
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Authentication Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="radio" name="mssql_auth" value="win_auth" id="win_auth" checked
+                                        onclick="enableWin();">
+                                    <label for="win_auth" class="hand marr10">Windows Authentication</label>
+
+                                    <br>
+
+                                    <input type="radio" name="mssql_auth" value="mssql_auth" id="mssql_auth"
+                                        onclick="enableMssql();">
+                                    <label for="mssql_auth" class="hand marr10">MSSQL Administrator Account</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=mysql_ssl','new_1',800,450,1,1)"
+                                        class="form-icon icon-help hand icon_inline" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <!-- --windows-- -->
+
+                            <div class="form-row " id="win1">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Resource Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="mssql_resName" size="1" id="mssql_resName">
+                                </div>
+                            </div>
+
+                            <div class="form-row " id="win2">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Account Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="winAuthUserName" size="1" id="winAuthUserName">
+                                </div>
+                            </div>
+
+                            <!-- mssql -->
+                            <div class="form-row" id="mssql1" style="display: none;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Account Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="mssql_accounts" id="mssql_accounts" autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Cisco IOS -->
+
+                    <div id="ciscoios" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right" for="filter4">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input type="radio" checked name="cisco_remotemode" value="ssh" id="cisco_sshr"
+                                        onclick="cisco_sshTelnetPortOptions()">
+                                    <label for="cisco_sshr" class="hand marr10">SSH</label>
+
+                                    <input type="radio" name="cisco_remotemode" value="telnet" id="cisco_tnl"
+                                        onclick="cisco_sshTelnetPortOptions()">
+                                    <label for="cisco_tnl" class="hand">Telnet</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="cisco_sshtelnetport" id="cisco_sshtelnetport" value="22"
+                                        validatemethod="isNumeric" errormsg="Please enter valid port number."
+                                        maxlength="5">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Landing Server
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select name="cisco_landingServer" id="cisco_landingServer">
+                                        <option value="0">NONE</option>
+                                        <option value="1">Landing Server</option>
+                                    </select>
+                                </div>
+                                <div class="form-icon icon-info hand icon_inline" style="margin:3px 0 0 5px;"
+                                    onmouseout="UnTip(this)"
+                                    onmouseover="Tip('Use this Landing Server Profile to establish SSH/Telnet Connections',this)"
+                                    title="Use this Landing Server Profile to establish SSH/Telnet Connections">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="cisco_login_user" id="login_user" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">User Mode Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="fieldName" value=">">
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <input type="checkbox" name="el_umode" id="el_umode" checked
+                                        style="margin: 10px 5px 0 0;">
+                                    <label for="el_umode">Account name required for login</label>
+                                </div>
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Enable Secret
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="cisco_enable_secret" id="enable_secret" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Enable Password
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="cisco_enable_password" id="enable_password"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Enable Mode Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="cisco_enable_prompt" value="#" id="enable_prompt">
+                                </div>
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Configuration Mode Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="config_prompt" value="#" id="config_prompt">
+                                </div>
+                            </div>
+
+                            <div class="break"></div>
+
+
+                            <div class="form-row" style="justify-content: center;">
+                                <div class=" hand">
+                                    <input type="checkbox" name="removeEnter" id="cis_append"
+                                        style="margin: 10px 5px 0 0;">
+                                </div>
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="cis_append">Append enter command for execution
+                                        while doing password reset
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row" style="justify-content: center;">
+                                <div class=" hand">
+                                    <input type="checkbox" name="cisco_startup_config" value="on" id="enable_startup"
+                                        class="hand" style="margin: 10px 5px 0 0;">
+                                </div>
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="enable_startup">Copy Password Changes
+                                        to the Startup Configuration
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- HP ProCurve -->
+
+                    <div id="hpprocurve" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input type="radio" checked name="hpswitch_remotemode" value="ssh"
+                                        id="hpswitch_sshr" onclick="HPProcurveTelnetOptions()">
+                                    <label for="hpswitch_sshr" class="hand marr10">SSH</label>
+
+                                    <input type="radio" name="hpswitch_remotemode" value="telnet" id="hpswitch_tnl"
+                                        onclick="HPProcurveTelnetOptions()">
+                                    <label for="hpswitch_tnl" class="hand">Telnet</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpswitch_sshtelnetport" id="hpswitch_sshtelnetport"
+                                        value="22" validatemethod="isNumeric" errormsg="Please enter valid port number."
+                                        maxlength="5">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Landing Server
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select class="selCombo" name="hpswitch_landingServer" id="hpswitch_landingServer">
+                                        <option value="0">NONE</option>
+                                        <option value="1">LANDING SERVER</option>
+                                    </select>
+                                </div>
+                                <div class="form-icon icon-info hand icon_inline" style="margin:3px 0 0 5px;"
+                                    onmouseout="UnTip(this)"
+                                    onmouseover="Tip('Use this Landing Server Profile to establish SSH/Telnet Connections',this)"
+                                    title="Use this Landing Server Profile to establish SSH/Telnet Connections">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Manager Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpmanager" id="hpmanager" autocomplete="off">
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <input type="checkbox" name="hpmanager_umode" id="hpmanager_umode" checked
+                                        style="margin: 10px 5px 0 0;">
+                                    <label for="hpmanager_umode">Account name required for login</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Manager Mode Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpswitch_enable_prompt" value="#" id="enable_prompt">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Configuration Mode Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpswitch_config_prompt" value="#" id="config_prompt">
+                                </div>
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row" style="justify-content: center;">
+
+                                <div class="hand">
+                                    <input type="checkbox" name="removeEnter" style="margin: 10px 5px 0 0;" class="hand"
+                                        id="hp_append">
+                                </div>
+
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="hp_append">Append enter command for execution
+                                        while doing password reset
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row" style="justify-content: center;">
+
+                                <div class="hand">
+                                    <input type="checkbox" name="hpswitch_startup_config" value="on"
+                                        id="hp_enable_startup" style="margin: 10px 5px 0 0;" class="hand">
+                                </div>
+
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="hp_enable_startup">Copy Password Changes
+                                        to the Startup Configuration
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- NetScreen -->
+
+                    <div id="netscreen" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-2">
+                                    <input type="radio" checked="" name="nsswitch_remotemode" value="ssh"
+                                        id="nsswitch_sshr" onclick="NetScreenTelnetOptions()">
+                                    <label for="nsswitch_sshr" class="hand marr10">SSH</label>
+
+                                    <input type="radio" name="nsswitch_remotemode" value="telnet" id="nsswitch_tnl"
+                                        onclick="NetScreenTelnetOptions()">
+                                    <label for="nsswitch_tnl" class="hand">Telnet</label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="nsswitch_sshtelnetport" id="nsswitch_sshtelnetport"
+                                        value="22" validatemethod="isNumeric" errormsg="Please enter valid port number."
+                                        maxlength="5">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Landing Server
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select class="selCombo" name="nsswitch_landingServer" id="nsswitch_landingServer">
+                                        <option value="0">NONE</option>
+                                        <option value="1">LANDING SERVER</option>
+                                    </select>
+                                </div>
+                                <div class="form-icon icon-info hand icon_inline" style="margin:3px 0 0 5px;"
+                                    onmouseout="UnTip(this)"
+                                    onmouseover="Tip('Use this Landing Server Profile to establish SSH/Telnet Connections',this)"
+                                    title="Use this Landing Server Profile to establish SSH/Telnet Connections">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Manager Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="nsmanager" id="nsmanager" autocomplete="off">
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <input type="checkbox" name="nsmanager_umode" id="nsmanager_umode" checked
+                                        style="margin: 10px 5px 0 0;">
+                                    <label for="nsmanager_umode">Account name required for login</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Manager Mode Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="nsswitch_enable_prompt" value="#" id="enable_prompt">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row" style="justify-content: center;">
+
+
+                                <div class="hand">
+
+                                    <input type="checkbox" name="removeEnter" style="margin: 10px 5px 0 0;" id="append"
+                                        class="hand">
+                                </div>
+
+                                <div class="form-ele-4">
+
+                                    <label class="width-100" for="append">Append enter command for
+                                        execution while doing password reset
+                                    </label>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- MySQL Server -->
+
+                    <div id="mysql" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">MySQL Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="mysql_port" id="mysql_port" value="3306"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Connection Mode
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input id="mysql_connection_mode_nossl" type="radio" name="mysql_connection_mode"
+                                        value="SIMPLE" checked>
+                                    <label for="mysql_connection_mode_nossl" class="hand marr10">Non-SSL</label>
+
+                                    <input id="mysql_connection_mode_ssl" type="radio" name="mysql_connection_mode"
+                                        value="SSL">
+                                    <label for="mysql_connection_mode_ssl" class="hand marr10">SSL</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=mysql_ssl','new_1',800,450,1,1)"
+                                        class="form-icon icon-help hand icon_inline" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root Account Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="mysql_accounts" id="mysql_accounts">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- PostgreSQL Server -->
+
+                    <div id="pgsql" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">PostgreSQL Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="pgsql_port" id="pgsql_port" value="5432"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Connection Mode
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input id="pgsql_connection_mode_nossl" type="radio" name="pgsql_connection_mode"
+                                        value="SIMPLE" checked>
+                                    <label for="pgsql_connection_mode_nossl" class="hand marr10">Non-SSL</label>
+
+                                    <input id="pgsql_connection_mode_ssl" type="radio" name="pgsql_connection_mode"
+                                        value="SSL">
+                                    <label for="pgsql_connection_mode_ssl" class="hand marr10">SSL</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=pgsql_ssl','new_1',800,450,1,1)"
+                                        class="form-icon hand icon_inline icon-help" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document">
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root Account Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="pgsql_accounts" id="pgsql_accounts" autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Sybase ASE -->
+
+                    <div id="sybase" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Sybase Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="sybase_port" id="sybase_port" value="5000"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Connection Mode
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input id="sybase_connection_mode_nossl" type="radio" name="sybase_connection_mode"
+                                        value="SIMPLE" checked>
+                                    <label for="sybase_connection_mode_nossl" class="hand marr10">Non-SSL</label>
+
+                                    <input id="sybase_connection_mode_ssl" type="radio" name="sybase_connection_mode"
+                                        value="SSL">
+                                    <label for="sybase_connection_mode_ssl" class="hand marr10">SSL</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=sybase_ssl','new_1',800,450,1,1)"
+                                        class="form-icon hand icon_inline icon-help" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="sybase_accounts" id="sybase_accounts" autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Oracle DB Server -->
+
+                    <div id="oracle" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Oracle DB Listener Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="oracle_port" id="oracle_port" value="1521"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Use Encrypted Connection
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input id="oracle_connection_mode_nossl" type="radio" name="oracle_connection_mode"
+                                        value="SIMPLE" checked onclick="changeOraclePortValue('nossl');">
+                                    <label for="oracle_connection_mode_nossl" class="hand marr10">No</label>
+
+                                    <input id="oracle_connection_mode_ssl" type="radio" name="oracle_connection_mode"
+                                        value="SSL" onclick="changeOraclePortValue('ssl');">
+                                    <label for="oracle_connection_mode_ssl" class="hand marr10">Yes</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=oracle_ssl','new_1',800,450,1,1)"
+                                        class="form-icon hand icon_inline icon-help" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="oracle_accounts" id="oracle_accounts" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Service Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="oracle_sid" id="Oracle_sid" autocomplete="off" value="ORCL"
+                                        errormsg="Please enter the service name" validatemethod="isNotEmpty">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- LDAP Server -->
+
+                    <div id="ldapserver" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="ldap_port" id="ldap_port" value="389"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Use Encrypted Connection
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input id="ldap_connection_mode_nossl" type="radio" name="ldap_connection_mode"
+                                        value="SIMPLE" checked onclick="changeOraclePortValue('nossl');">
+                                    <label for="ldap_connection_mode_nossl" class="hand marr10">No</label>
+
+                                    <input id="ldap_connection_mode_ssl" type="radio" name="ldap_connection_mode"
+                                        value="SSL" onclick="changeOraclePortValue('ssl');">
+                                    <label for="ldap_connection_mode_ssl" class="hand marr10">Yes</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=oracle_ssl','new_1',800,450,1,1)"
+                                        class="form-icon hand icon_inline icon-help" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="ldap_accounts" id="ldap_accounts" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">LDAP Server Type
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select name="ldapType" id="LDAP_TYPE" style="width:200px;">
+                                        <option value="MACTIVEDIRECTORY">Microsoft Active Directory</option>
+                                        <option value="NOVELDIRECTORY">Novell eDirectory</option>
+                                        <option value="OPENLDAP">OpenLDAP</option>
+                                        <option value="ORACLEDIRECTORY">Oracle Internet Directory</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- HP ILO -->
+
+                    <div id="hpilo" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input type="radio" checked="" name="hpilo_remotemode" value="ssh" id="hpilo_sshr"
+                                        onclick="HPiLOTelnetOptions()">
+                                    <label for="hpilo_sshr" class="hand marr10">SSH</label>
+
+                                    <input type="radio" name="hpilo_remotemode" value="telnet" id="hpilo_tnl"
+                                        onclick="HPiLOTelnetOptions()">
+                                    <label for="hpilo_tnl" class="hand">Telnet</label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpilo_sshtelnetport" id="hpilo_sshtelnetport" value="22"
+                                        maxlength="5">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">User Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpilo_user_prompt" value=">" id="hpilo_user_prompt">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Landing Server
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select class="selCombo" name="hpilo_landingServer" id="hpilo_landingServer">
+                                        <option value="0">NONE</option>
+                                        <option value="1">LANDING SERVER</option>
+                                    </select>
+                                </div>
+                                <div class="form-icon icon-info hand icon_inline" style="margin:3px 0 0 5px;"
+                                    onmouseout="UnTip(this)"
+                                    onmouseover="Tip('Use this Landing Server Profile to establish SSH/Telnet Connections',this)"
+                                    title="Use this Landing Server Profile to establish SSH/Telnet Connections">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator User Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="hpilo_admin_user" id="hpilo_admin_user" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row" style="justify-content: center;">
+
+                                <div class="hand">
+
+                                    <input type="checkbox" name="removeEnter" style="margin: 10px 5px 0 0;"
+                                        id="hpilo_append" class="hand">
+                                </div>
+
+                                <div class="form-ele-4">
+
+                                    <label class="width-100" for="hpilo_append">Append enter command for
+                                        execution while doing password reset
+                                    </label>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- VMware ESXI -->
+
+                    <div id="esxi" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+
+                                    <input type="radio" checked name="esxi_remotemode" value="api"
+                                        onclick="ESXiTelnetOptions();" id="esxi_apir">
+                                    <label for="esxi_apir" class="hand marr10">API</label>
+
+                                    <input type="radio" name="esxi_remotemode" value="ssh" id="esxi_sshr"
+                                        onclick="ESXiTelnetOptions();">
+                                    <label for="esxi_sshr" class="hand marr10">SSH</label>
+
+                                    <input type="radio" name="esxi_remotemode" value="telnet" id="esxi_tnl"
+                                        onclick="ESXiTelnetOptions();">
+                                    <label for="esxi_tnl" class="hand">Telnet</label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="esxi_rootaccount" id="esxi_rootaccount" autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- AWS IAM -->
+
+                    <div id="awsiam" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Access Key
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="AccessKeyResId" id="ResName1" onchange="listAccounts(1)">
+                                        <option value="0" disabled selected>Select Resource</option>
+                                        <option value="1">Resource 1</option>
+                                        <option value="2">Resource 2</option>
+                                        <option value="3">Resource 3</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">
+                                        <span class="float-right marl5"></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="AccName1" id="AccName1" class="txtbox">
+                                        <option value="0">--Select Account--</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row" style="align-items: center;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Secret Key
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="SecretKeyResId" id="ResName2" onchange="listAccounts(2)">
+                                        <option value="0" disabled selected>Select Resource</option>
+                                        <option value="1">Resource 1</option>
+                                        <option value="2">Resource 2</option>
+                                        <option value="3">Resource 3</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row" style="align-items: center;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">
+                                        <span class="float-right marl5"></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="AccName2" id="AccName2" class="txtbox">
+                                        <option value="0">--Select Account--</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Google Apps -->
+
+                    <div id="gapps" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="gapps_admin_user" id="gapps_admin_user" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MS Azure -->
+
+                    <div id="office365" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="office365_admin_user" id="office365_admin_user"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rackspace -->
+
+                    <div id="rackspace" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Administrator Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="rackspace_admin_user" id="rackspace_admin_user"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Salesforce -->
+
+                    <div id="salesforce" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row" style="align-items: center;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Client Id
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="SFAccessKeyResId" id="SFResName1" onchange="listSFAccounts(1)">
+                                        <option value="0" disabled selected>Select Resource</option>
+                                        <option value="1">Resource 1</option>
+                                        <option value="2">Resource 2</option>
+                                        <option value="3">Resource 3</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row" style="align-items: center;">
+                                <div class="form-ele-5">
+                                    <label class="width-100">
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="SFAccName1" id="SFAccName1">
+                                        <option value="0">--Select Account--</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row" style="align-items: center;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Client Secret
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-3">
+                                    <select name="SFSecretKeyResId" id="SFResName2" onchange="listSFAccounts(2)">
+                                        <option value="0" disabled selected>Select Resource</option>
+                                        <option value="1">Resource 1</option>
+                                        <option value="2">Resource 2</option>
+                                        <option value="3">Resource 3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row" style="align-items: center;">
+                                <div class="form-ele-5">
+                                    <label class="width-100">
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <select name="AccName2" id="AccName2" class="txtbox">
+                                        <option value="0">--Select Account--</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Weblogic -->
+
+                    <div id="weblogic" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Weblogic Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="weblogic_port" id="weblogic_port" value="7001"
+                                        errormsg="Please enter a valid port" validatemethod="isNumeric">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Connection Mode
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input id="weblogic_connection_mode_nossl" type="radio"
+                                        name="weblogic_connection_mode" value="SIMPLE" checked>
+                                    <label for="weblogic_connection_mode_nossl" class="hand marr10">Non-SSL</label>
+
+                                    <input id="weblogic_connection_mode_ssl" type="radio"
+                                        name="weblogic_connection_mode" value="SSL">
+                                    <label for="weblogic_connection_mode_ssl" class="hand marr10">SSL</label>
+
+                                    <div onclick="centrePopup('ACContextHelp.ma?TARGET=pgsql_ssl','new_1',800,450,1,1)"
+                                        class="form-icon icon-help hand icon_inline" width="18" height="18"
+                                        style="margin-bottom:5px;" title="Help Document"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root Account Name
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="weblogic_accounts" id="weblogic_accounts"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SSH Command Sets -->
+
+                    <div id="CustomCli" class="hide">
+
+                        <div class="form-wrapper" style="border: none;">
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right" for="filter4">Remote Login Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <input type="radio" checked name="CustomCli_remotemode" value="ssh" id="s_sshr"
+                                        onclick="telnetOptions();">
+                                    <label for="s_sshr" class="hand marr10">SSH</label>
+
+                                    <input type="radio" name="CustomCli_remotemode" value="telnet" id="ssh_tnl"
+                                        onclick="telnetOptions();">
+                                    <label for="ssh_tnl" class="hand">Telnet</label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Port
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="CustomCli_sshtelnetport" id="CustomCli_sshtelnetport"
+                                        value="22" validatemethod="isNumeric" errormsg="Please enter valid port number."
+                                        maxlength="5">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">User Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="CustomCli_userprompt" id="CustomCli_userprompt" value="$"
+                                        validatemethod="isNotEmpty" errormsg="Please enter valid user prompt.">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Landing Server
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-2">
+                                    <select class="selCombo" name="CustomCli_landingServer"
+                                        id="CustomCli_landingServer">
+                                        <option value="0">NONE</option>
+                                        <option value="1">LANDING SERVER</option>
+                                    </select>
+                                </div>
+                                <div class="form-icon icon-info hand icon_inline" style="margin:3px 0 0 5px;"
+                                    onmouseout="UnTip(this)"
+                                    onmouseover="Tip('Use this Landing Server Profile to establish SSH/Telnet Connections',this)"
+                                    title="Use this Landing Server Profile to establish SSH/Telnet Connections">
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row" style="margin-top: 10px;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Remote Login Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="CustomCli_normalaccount" id="NormalAccount">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-ele-5">
+
+                                    <label class="width-100 align-right" for="filter4">Authentication Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-6">
+                                    <input type="radio" checked name="CustomCli_authentication" value="passauth"
+                                        id="com_passauth" onclick="authOptions();">
+                                    <label for="com_passauth" class="hand marr10">Use Password Authentication</label>
+
+                                    <input type="radio" name="CustomCli_authentication" value="keyauth" id="com_keyauth"
+                                        onclick="authOptions();">
+                                    <label for="com_keyauth" class="hand marr10">Use PKI Authentication</label>
+
+                                    <div class="hand form-icon icon-info icon_inline" style="margin:3px 0 0 5px;"
+                                        onmouseout="UnTip(this)"
+                                        onmouseover="Tip('Supported for SSH2 only. The corresponding public key should be present in the remote system under the remote login account, typically in a location like $HOME/.ssh/authorized_keys.',this)"
+                                        title="Supported for SSH2 only. The corresponding public key should be present in the remote system under the remote login account, typically in a location like $HOME/.ssh/authorized_keys.">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="break"></div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Privilege Elevation Method
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-ele-4" style="margin-right:10px">
+                                    <input type="radio" checked name="CustomCli_elevationType" value="su"
+                                        id="com_suroot" onclick="elevationOption();">
+                                    <label for="com_suroot" class="hand marr10">'su' as root</label>
+
+                                    <input type="radio" name="CustomCli_elevationType" value="sudo" id="com_sudo"
+                                        onclick="elevationOption();">
+                                    <label for="com_sudo" class="hand marr10">Use 'sudo'</label>
+
+                                    <div class="hand icon-info icon_inline" style="margin:3px 0 0 5px;"
+                                        onmouseout="UnTip(this)"
+                                        onmouseover="Tip('For remote password reset, PAM360 first logs in using the remote login account using the specified authentication method. Then, to be able to modify the password of any user account, privilege elevation is necessary. PAM360 can either \'su\' as root  or use \'sudo\' to execute the password reset commands. Note that the remote system\'s sudo configuration should allow the remote login account to execute the password reset command.',this)">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="break"></div>
+
+
+                            <div class="form-row" style="margin-top: 10px;">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root Account
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="CustomCli_rootaccount" id="RootAccount" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-ele-5">
+                                    <label class="width-100 align-right">Root User Prompt
+                                        <span class="float-right marl5">:</span>
+                                    </label>
+                                </div>
+                                <div class="form-ele-3">
+                                    <input type="text" name="CustomCli_rootuserprompt" id="CustomCli_rootuserprompt"
+                                        value="#" validatemethod="isNotEmpty"
+                                        errormsg="Please enter valid root user prompt.">
+                                </div>
+                            </div>
+
+
+                            <div class="break"></div>
+
+
+                            <div class="form-row" style="justify-content: center;">
+
+                                <div class="hand">
+                                    <input type="checkbox" name="removeEnter" id="com_append"
+                                        style="margin: 10px 5px 0 0;">
+                                </div>
+
+                                <div class="form-ele-4">
+                                    <label class="width-100" for="com_append">Append enter command for
+                                        execution while doing password reset
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- FORM END -->
+
+                <div align="center" class="padt10">
+                    <button id="bulkSynDetailsViewButton" style="padding-right:10px"
+                        class="uni_button"><span><em>Save</em></span></button>
+                    <button type="button" class="sec_button"><span><em>Cancel</em></span></button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <script src="./script/main.js"></script>
+    
+
+
+</body>
+
+</html>

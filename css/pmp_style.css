@@ -1,0 +1,942 @@
+	.ui-jqgrid .ui-jqgrid-htable th div {font-size: 13px!important;height: 32px !important;line-height: 32px;text-align:left;color:#000!important;font-family:Open sans!important;}
+.ui-jqgrid .ui-jqgrid-bdiv{overflow-x: hidden !important;}
+.ui-jqgrid-bdiv{border:1px solid #ddd;border-top:none}
+#ListViewDiv .ui-jqgrid .ui-jqgrid-pager{border-bottom:1px solid #e8e8e8!important}
+.pointer{cursor: pointer;color: #039be5!important;padding: 2px 5px}
+.pointer:hover{color: black} 
+.myPager>a{padding: 0 5px}
+.myPager span{display:none}
+
+#pmp_themes .simpletab ul li a.active {    color: #000!important;    background: none;}
+
+.template_selected { background-color:  #e9e9e9 !important;}
+
+/*
+#KMP_PMPDiv .ui-pg-input{width:35px!important}
+#createCertTable .col-sm-4{width:250px}
+.col-sm-4 .mlselect{width:250px}	
+#keys-div .col-sm-4{width:250px!important}
+*/
+SELECT.form-control, .form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc!important;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 27px;
+    line-height: 1.42857;
+    padding: 3px 6px;
+	margin:0 0 5px 0;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 200px !important;
+   }
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #eee !important;
+    opacity: 1;
+}
+.col-sm-4{width:250px}	
+ /*Hide this class to check the export button was not display properly
+.form-group .btn-file {
+    border-radius: 3px 0 0 3px;
+    border-right: medium none;
+    padding: 3px 0;
+    text-align: center;
+    width: auto !important;
+    font-size: 13px;
+    padding: 3px -2px 3px 6px;
+    height: 28px;
+    line-height: 12px;
+}*/
+.btn-file{line-height:12px!important}
+
+.form-group span:nth-child(1) {
+    text-align: right;
+    width: auto!important;
+}
+
+#searchButtonId .glyphicon-search{top:-2px!important}
+
+/*Reports page records show per page navigation style*/
+/*.itemsPerPage > button.btn-default.active {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: 1px solid red;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #337ab7;
+    margin: 5px 0 0;
+    padding: 3px 6px;
+}*/
+
+/*button.btn-default {
+    margin: 0px;
+    padding: 4px 12px;
+    text-align: center;
+    width: auto;
+    color: inherit;
+    background: #f1f1f1;
+    font-weight: normal;
+}*/
+/*.pmp_ltblue .btn-primary {
+    background: #039be5 !important;
+    padding: 6px 12px;
+    border-radius: 4px !important;
+    color: #fff;
+    font-weight: normal;
+    border: 1px solid #0393d9;
+}*/
+.ui-jqgrid tr.jqgrow td{font-size:13px!important}
+table.ui-jqgrid-htable th.ui-state-hover{background:#f7f7f7!important}
+
+#grid_seach{padding-top:0px}
+#grid_download {
+    padding-right: 11px;
+}
+.diband{background-color:#f1f1f1;border-radius:4px 4px 0 0;padding:4px 8px;border:1px solid #ccc;border-bottom:none;width: 270px;height:45px}
+#key-div #LISTOFKEYS{width:264px!important}
+#keys-div select {width:264px!important}
+#SpecificDevice-div #LISTOFDEVICES{width:271px!important}
+#SpecificDevice-div select {width:270px!important}
+/*#specifickeys-div .col-sm-1 .btn.btn-default, #keys-div .col-sm-1 .btn.btn-default{width:auto!important;background:#fff;}*/
+.mlselect option{font-size:13px !important;}
+.buttn-action{color:#fff!important;}
+
+#SpecificCriteria-div{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    max-height: 250px;
+    overflow: auto;
+    padding: 15px!important;
+}
+.formInputArea, .formInputAreaBig {
+    border: 1px solid #e8e8e8;
+    color: #000000;
+    font-size: 10pt;
+    height: 50px;
+    padding: 2px;
+}
+.icon-help{color: #10bc83;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: sub;}
+	
+.pmp_ltblue .buttn-action{background:#039be5!important;border:1px solid #039be5!important;}
+.pmp_ltpurple .buttn-action{background: #9C27B0 !important;border:1px solid #9C27B0!important;}
+.pmp_turgreen .buttn-action{background: #1abc9c !important;border:1px solid #1abc9c!important;}
+.pmp_yellow .buttn-action{background: #FFA800 !important;border:1px solid #FFA800!important;}
+.pmp_ltred .buttn-action{background: #EF5350 !important;border:1px solid #EF5350!important;}
+.pmp_black .buttn-action{background: #212121 !important;border:1px solid #212121!important;}
+.pmp_purple .buttn-action{background: #5B4BA0 !important;border:1px solid #5B4BA0!important;}
+.pmp_blue .buttn-action{background: #2B79B9 !important;border:1px solid #2B79B9!important;}
+.pmp_green .buttn-action{background: #5B9F0E !important;border:1px solid #5B9F0E!important;}
+.pmp_orange .buttn-action{background: #ff6e2b !important;border:1px solid #ff6e2b!important;} 
+.pmp_merown .buttn-action{background: #C12C2A !important;border:1px solid #C12C2A!important;}
+.pmp_urbanbrown .buttn-action{background: #7D6B5C !important;border:1px solid #7D6B5C!important;}
+
+.buttn-action{
+	padding:6px 8px;
+	border-radius:2px!important;
+	color:#fff;
+}
+.buttn-disabled{
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .65
+	
+}
+.buttn{background: #f1f1f1 none repeat scroll 0 0 !important;border: 1px solid #cccccc !important;border-radius: 2px !important;color: #333;font-style: normal;font-weight: normal;padding: 6px 18px !important;}
+.hlpan_wrap{border-left: 1px solid #ddd !important;}
+.ui-front {
+    z-index: 1100 ;
+}
+.ui-jqgrid tr.jqgr
+ow td, .buttn, .dropdown-menu, .ui-jqgrid .ui-pg-table td{
+	font-size : 13px !important;
+}
+
+.topband2 #Password_View_Div_Id h4{
+	margin: -1px -23px 10px -19px  !important;
+	padding: 14px 10px 14px 30px  !important;
+}
+.topband2 #Password_View_Div_Id .pad10 h4.pgtitle {
+    margin: -11px -23px 10px -19px  !important;
+}
+.topband2 h1.pgtitle{
+	margin: -1px -23px 8px -19px  !important;
+	padding: 7px 10px 7px 20px  !important;
+}
+.topband2 #Password_View_Div_Id .pad10 h4.pgtitle {
+    margin: -11px -23px 10px -19px  !important;
+}
+
+.topband2 h3.pgtitle{
+	margin: -1px -23px 8px -19px  !important;
+	padding: 12px 10px 10px 26px  !important;
+}
+.topband2 #Password_View_Div_Id .pad10 h3.pgtitle {
+    margin: -11px -23px 10px -19px  !important;
+}
+ #Password_View_Div_Id .pad10 h3.pgtitle {
+    margin: -11px -23px 10px -19px  !important;
+}
+
+.topband2 h1.stpgtitle{
+	margin: -1px -23px 8px -19px  !important;
+	padding: 7px 10px 4px 30px  !important;
+}
+.topband2 #Password_View_Div_Id .pad10 h1.stpgtitle {
+    margin: -11px -23px 10px -19px  !important;
+}
+
+#Password_View_Div_Id h4, h1.pgtitle, h3.pgtitle, h1.stpgtitle{
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #ddd;
+	display: block !important; 
+	font-size: 15px;
+	color:#000;
+} 
+.scrollableDivDashbrd h4, .scrollableDivDashbrd  h1.pgtitle, .scrollableDivDashbrd  h3.pgtitle, .scrollableDivDashbrd h1.stpgtitle{
+	background-color: #fff !important;
+	border-bottom: none !important;
+	display: block;
+	font-size: 15px;
+	color:#333;
+	margin-left: -20px !important;
+}
+
+#Password_View_Div_Id h4{
+	margin: -1px -23px 10px -19px  !important;
+	padding: 11px 10px 14px 30px  !important;
+}
+h1.pgtitle, h1.stpgtitle{
+	margin: -1px -23px 8px -19px  !important;
+	padding: 4px 10px 7px 30px  !important;
+}
+h1.stpgtitle{
+	margin: -1px -23px 8px -19px  !important;
+	padding: 4px 10px 4px 30px  !important;
+}
+h3.pgtitle{
+	margin: -1px -23px 8px -19px  !important;
+	padding: 9px 10px 10px 26px  !important;
+}
+
+/*
+#Password_View_Div_Id .pgtitle {
+    color: #000;
+    font-size: 15px!important;
+    margin: 10px -23px 10px -19px!important;
+    padding: 0 10px 6px 33px!important;
+}*/
+#Password_View_Div_Id .pgtitle {
+    color: #000;
+    font-size: 15px!important;
+    margin: 0;
+    padding: 10px 10px 6px 15px;
+}
+
+.topband2 #auditRightRep .pgtitle {
+    margin: -49px 0px 0px 170px !important;
+}
+
+#auditRightRep .pgtitle {
+    border: none;
+    margin: -52px 0px 0px 170px !important;
+    padding: 0px !important;
+}
+#Password_View_Div_Id .pgtitle>label ,#Password_View_Div_Id h4>label{
+	margin-bottom:0px;
+}
+#ssl_csr {
+    width: 100%;
+}
+#options +.form-group{
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 25px;
+}
+#CreateSshKeyForm h4 {
+    margin: -11px -12px 10px -10px !important;
+}
+/*
+#btnNoConfirmYesNo {
+    width: 100px;
+    background: #fff;
+    border-radius: 1px;
+    font-weight: 400;
+}
+
+#btnYesConfirmYesNo {
+    width: 98px;
+    height: 26px;
+    margin-top: 4px;
+    margin-right: 24px;
+    font-weight: 400;
+    border-radius: 2px;
+}
+
+#closeModal ,#close_Dialog{
+    width: auto;
+    background: #fff;
+    font-weight: 400;
+    height: 31px;
+    margin-top: 0px;
+    border-radius: 2px;
+    line-height: 1px;
+}*/
+.form-inline .col-sm-1 {
+    margin-left: 140px;
+}
+
+#schedule-keyrotation-div select {
+    margin-left: 13px;
+    width: 361px !important;
+}
+#keys-div select {
+    margin-left: 13px;
+}
+ .icon-ssl-history:before {
+  content: "\e0bf";
+}
+
+ul.dropdown-menu li{display:block!important;padding:4px 0px!important;line-height:0!important}
+.buttn-default:hover {
+    background-color: red;
+    border-color: #adadad;
+    color: #333;
+}
+.buttn/*,.btn*/{
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	/*margin-right: 10px;*/
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 3px!important;
+}
+.buttn-default/*, .btn-default */{
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	padding:6px 12px!important;
+}
+
+.buttn-default:focus,
+.buttn-default.focus/*, .btn-default:focus */{
+  color: #333;
+  background-color: #d4d4d4!important;
+  border-color: #8c8c8c;
+}
+.buttn-default:hover/*, .btn-default:hover */{
+  color: #333;
+  background-color: #d4d4d4!important;
+  border-color: #adadad;
+}
+.buttn-default:active,
+.buttn-default.active,
+.open > .dropdown-toggle.buttn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.modal-footer {
+    border-top: none!important;
+    padding:15px;
+	text-align:center!important;
+}
+.myPager a.pointer {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+}
+.col-sm-4{width:300px!important}
+#keys-div .col-sm-4 {width: 400px}
+#SpecificDevice-div .col-sm-4 {width: 400px}
+/*KMP Table Navigation CSS*/
+/*
+#PKISSHKeys_toppager_center, #PKIKeysGroupList_toppager_center,#AllUsersKeys_toppager_center,#PKIInventoryList_toppager_center,#CreatedCertList_toppager_center,#PKIRequestList_toppager_center,#PendingCertList_toppager_center,#requestChallenges_toppager_center,#ScheduleDetailsList_toppager_center,#ScheduleAuditDetailsList_toppager_center{width:300px!important}
+#PKIKeysGroupList_toppager_center input[type="text"],#pg_AllUsersKeys_toppager input[type="text"],#PKIInventoryList_toppager_center input[type="text"],#CreatedCertList_toppager_center input[type="text"],#PKIRequestList_toppager_center input[type="text"],#PendingCertList_toppager_center input[type="text"],#requestChallenges_toppager_center input[type="text"],#ScheduleDetailsList_toppager_center input[type="text"],#ScheduleAuditDetailsList_toppager_center input[type="text"]{width:auto!important}
+#PKISSHKeys_toppager_right, #PKIKeysGroupList_toppager_right, #AllUsersKeys_toppager_right, #PKIInventoryList_toppager_right,#CreatedCertList_toppager_right,#PKIRequestList_toppager_right,#PendingCertList_toppager_right,#requestChallenges_toppager_right,#ScheduleDetailsList_toppager_right, 
+#ScheduleAuditDetailsList_toppager_right{width:110px}*/
+#KMP_PMPDiv .diband{width:245px!important}
+#KMP_PMPDiv .diband input[type="text"]{width:180px!important}
+#KMP_PMPDiv .mlselect select,#KMP_PMPDiv select{border-radius: 0!important;margin-left: 0px;width: 245px!important}
+#KMP_PMPDiv textarea{width:245px!important;height:100px!important}
+#KMP_PMPDiv #textfile{width:175px!important}
+#KMP_PMPDiv .col-sm-4, #KMP_PMPDiv .col-sm-5 {
+    width: auto !important;
+    padding-left: 15px;
+}
+#KMP_PMPDIV .btn-file{margin-left:5px}
+.col-sm-3{width:27%!important}
+.col-sm-4.form-inline #Hrs, .col-sm-4.form-inline #Mins { width: 50px !important;
+}
+
+table.ui-pg-table input[type="text"]{width:auto!important}
+.ui-pg-table{height:34px}
+.ui-pg-table tr td:nth-child(2){width:300px!important}
+.ui-pg-table tr td:nth-child(3){width:200px}
+#KMP_PMPDiv .ui-pg-table input[type="text"]{width:auto!important}
+
+
+/*Discovery*/
+#domainDiscovery .col-sm-1{width: auto!important}
+
+/*SSH Keys table styles*/
+.ui-jqgrid .ui-paging-info{font-weight: normal;height: 19px;line-height: 16px;margin-left: 5px;margin-right: 4px;margin-top:0}
+.ui-pg-button.ui-corner-all.ui-state-hover{padding:0!important;background-color:#fff!important}
+.ui-jqgrid .ui-pg-table td{padding:0 1px !important}
+
+.buttn-action{margin-left:5px!important}
+
+/*Add Keys groups styles*/
+.form-inline .col-sm-1{margin-left:0!important}
+#critetriaTable select{width:90%!important}
+
+
+/*Create CSR*/
+/*#createCertTable .col-sm-4{width:266px!important}*/
+
+
+/*Certificate Request*/
+#CSRContentDiv textarea{height:100px!important}
+#CSRFileDiv input[type="text"]{width:130px!important}
+
+/*Let's Encrypt*/
+#fileDiv .input-group input[type="text"]{width: 130px!important}
+#fileDiv .btn-file{margin-left:5px}
+
+
+/*Schedule */
+#specifickeys-div .col-sm-4 select{width:245px!important;margin-left:0}
+#schedule-keyrotation-div .col-sm-8 .checkbox input[type="checkbox"]{margin:0 5px}
+
+
+#specifickeys-div .col-sm-1{width:80px!important}
+#schedule-keyrotation-div .col-sm-8 .checkbox input[type="checkbox"]{margin:0 5px}
+#hourly-recurrence-div .col-sm-4 input[type="text"],#schedule-recurrence-div .col-sm-4 input[type="text"], #port input[type="text"]{width:90px!important}
+#port input[type="text"]{width:90px!important}
+#hourly-recurrence-div .col-sm-4 select, #schedule-recurrence-div .col-sm-4 select{width:90px!important}
+
+/*Table row hover*/
+.ui-widget-content.jqgrow.ui-row-ltr.ui-state-hover{background:#f8f8f8!important}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{background: #f8f8f8!important}
+.ember-table-header-cell{background-color:#f8f8f8!important;display: block;font-size: 12px;padding:0;position: relative}
+
+/*Reports information*/
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-size: 13px!important;font-family:inherit!important;
+}
+
+/**Modal dialog*/
+.modal-dialog {
+    margin: 0 auto!important;
+    width: 600px;
+    top: 0px ! important;
+}
+.modal-content{border-radius:0!important;padding: 0px 20px 0px 20px;}
+.modal{
+	z-index: 99 !important;
+}
+/***Dashboard***/
+
+.graph{width:auto;height:300px; margin:0 auto;border: 1px solid #ddd;border-radius: 3px;box-shadow: 1px solid #d8e2e7;}
+.kycount { font-size: 36px; font-weight: bold; color: #394440; float: left; padding-left: 5px; line-height: 30px; }
+.dash_wg_wrapper { height: 100px; background-color: #fff; border-radius: 3px; padding: 15px; cursor: pointer; box-shadow: 0 1px 1px 1px #e5e4e4; }
+.widtitle { line-height: 28px;}
+
+#sha1count{margin: 20px 0;color:#008FFB}
+#1024count{margin: 20px 0;color:#F35F62}
+
+#box1_full,#box1_ssh{color:#AF76F0}
+#box2_full ,#box2_ssh{ color:#008FFB}
+#box3_full,#box2_ssh{color:#A2CF37}
+#box4_full,#box4_ssh{color:#F35F62}
+.icon1,.icon2,.icon3,.icon4{color:#777!important}
+/***Dashboard End***/
+
+/*Table search box css*/
+#KMP_PMPDiv #ListViewDiv input[type="text"]{width:90%!important}
+
+#KMP_PMPDiv #ListViewDiv input[type="text"].ui-pg-input{width:auto!important}/*page navigation text box*/
+
+/*main line tab css*/
+#pmp_themes .simpletab ul li a.active{color:#000!important}
+.pmp_blue .simpletab ul li a.active{border-bottom: 3px solid #039be5!important;background:#f9f9f9!important}
+.pmp_ltpurple .simpletab ul li a.active, .pmp_ltpurple .simpletab ul li a:focus{border-bottom: 3px solid #9c27b0!important;background:#f9f9f9!important}
+
+
+#innerDash {
+    margin: -5px -10px -10px -10px;
+    background-color: #eeeeee;
+    border: none !important;
+    height: 100%;
+}
+table.ui-jqgrid-htable th input[type="checkbox"]{margin:5px 5px 0 2px}
+tr.ui-search-toolbar input {
+    height: 27px!important;
+    margin-left: 2px !important;
+    margin-top: 0px !important;
+    padding: 5px 5px !important;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+    border-bottom: medium none;
+    border-top: medium none !important;
+    font-weight: normal;
+    height: 30px !important;
+    line-height: 24px !important;
+    overflow: hidden;
+    padding: 0px 0 5px 9px !important;
+    white-space: pre;
+}
+
+.custom-menu ul a {
+    color: #333;
+}
+#sslDash, #sshDash{
+	margin: -5px -10px -10px -10px;background-color: #eeeeee;border:none;height: 100%;
+}
+#Password_View_Div_Id #modal-title {
+    font-size: 18px !important;
+}
+button.buttn.buttn-action:disabled, button.buttn.buttn-action[disabled] {
+    background: rgb(228, 227, 227) !important;
+    opacity: 0.5;
+    color: rgb(51, 51, 51) !important;
+    border: 1px solid rgb(159, 158, 158) !important;
+}
+#KMP_PMPDiv .form-group span:nth-child(2), #CAMAIL .control-label{
+	width:auto !important;
+}
+#KMP_PMPDiv .noRowMsg {border: none;border-top: 1px solid #ddd}
+
+#KMP_PMPDiv input[type="text"],#KMP_PMPDiv input[type="password"],#KMP_PMPDiv input[type="validity"]{background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    height: 27px!important;
+    margin: 5px 0;
+    padding: 0 5px;
+    width: 245px !important;
+   }
+
+
+/**
+======== Prakash Edited - 16-11-2017 =========
+**/
+input.form-control {  /** Total input box height modified **/
+	height: 27px !important;
+}
+
+label#domain_Name.control-label { /** PKI-45 **/
+	padding-left: 0!important;
+}
+label#req_type.control-labe {
+	padding-left: 0!important;
+}
+#fileDiv .btn-file { 
+	margin-left: 0 !important;
+}
+
+input[type="text"]#textfile { /*** PKI-69 same as PKI-98 and PKI-146 and PKI-160 - Repeated ***/
+	width: 129px !important;
+}
+input[type="text"]#textfile1 { 
+	width: 129px !important;
+}
+input[type="text"]#filename1,input[type="text"].browseButtonInput{ 
+	width: 129px !important;
+}
+.col-sm-offset-4.col-sm-4 > .buttn {
+	margin-left: 78px !important;
+}
+
+#need_assistance_form_id > p > label { /** PKI-313 **/
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+#need_assistance_id h2 {
+	margin-left: 0 !important;
+}
+#need_assistance_id { 
+	z-index: 9999 !important;
+}
+#need_assistance_form_id > h2 > span.icon_inline {
+	margin-top: 5px;
+}
+
+#Hrs.input, #Mins.input { /** PKI-54 **/
+	width: 40px !important;
+}
+
+#span_help_img > .icon-exclamentry-new:before {  /** PKI-179 **/
+	position: absolute;
+}
+
+#PKISSHKeys div.pointer { /** PKI-245 **/
+	padding:0 !important;
+}
+
+.add-role-body { /** PKI-358 **/
+	height: 410px !important;
+}
+#role-second-layer-tree ul {
+	max-height: 290px;
+    overflow: auto;
+}
+
+#modal_main_dialog .col-sm-offset-4 { /** PKI-344 **/
+	width: 245px !important;
+    margin-left: 155px !important;
+}
+#modal_main_dialog .col-sm-offset-4 > button.btn-default {
+	margin-top: 1px !important;
+}
+#modal_main_dialog #cert_type .col-sm-8 > label:first-child {
+	padding-left: 0;
+    margin-left: 0;
+}
+
+
+
+
+/** -- Already css is there. just modified the previous one -- **/
+
+#KMP_PMPDiv .diband input[type="text"]   /*** PKI-90 ***/
+{     
+    /* width: 135px!important;  old */
+	width: 134px !important;
+}
+
+/*PKI-63*/
+#KMP_PMPDiv .noRowMsg {border:none;border-top:1px solid #ddd}
+
+.srbxselect{background:rgba(255, 255, 255, 0.2) none repeat scroll 0 0;display: block;float: left;height: 50px!important;margin: 0 0 0 117px;padding:0;width:360px;border:none;}
+
+
+
+.notcount {
+    background: #f72e19 none repeat scroll 0 0 !important;
+    border: 1px solid #da4839 !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    margin: 9px 0px 0px -12px !important;
+    padding: 1px 0px !important;
+    cursor: pointer !important;
+    font-size: 7px !important;
+    position: absolute !important;
+    width: 13px !important;
+    height: 14px !important;
+    padding: 2px 3px 3px 2px !important;
+}
+
+.jstree-icon.jstree-themeicon.icon-resources{
+    display: inline-block ! important;
+}
+
+.jstree-icon.jstree-themeicon.icon-user{
+    display: inline-block ! important;
+}
+
+.icon-user.jstree-themeicon-custom.treePinHover {
+    margin-left: 0px !important;
+    margin-top: 0px!important;
+    margin-right: 2px !important;
+    padding : 0px!important;
+}
+
+.icon-user.jstree-themeicon-custom.treePin {
+    margin-left: 0px !important;
+    margin-top: 0px!important;
+    margin-right: 2px !important;
+    padding : 0px!important;
+}
+
+.ui-jqgrid-btable tbody tr td:first-child{
+    padding-left:0px ! important;
+}
+
+.ui-state-default.ui-jqgrid-hdiv{
+    overflow: hidden;
+}
+
+#requestDetails .col-sm-5{
+    width:200px;
+}
+
+#letsCertDeploy .col-sm-5{width:180px;}
+#letsCertDeploy .col-sm-6{width:350px;}
+
+.ui-jqgrid-sortable{
+    padding-left: 5px;
+}
+
+/*SSL Vulnerability Dialog*/
+.poodle_ssl {
+vertical-align: middle;
+background-position: -3px -3px;
+height: 21px;
+width: 22px!important;
+}
+
+.heartbleed {
+vertical-align: middle;
+background-position: -29px -3px;
+height: 21px;
+width: 22px!important;
+}
+
+.kmpTableHeight{
+    height: calc(100% - 50px);
+}
+
+.kmp_rightView {
+    bottom:20px;
+    float: left;
+    left: 91px;
+    right: 20px;
+    top: 81px;
+    position: fixed;
+}
+
+#pmp_themes #messageNotifySuccess {
+    background-color: #eddd82 !important;
+    color: #333 !important;
+    border-radius: 0 0 3px 3px;
+    color: #ffffff;
+    display: inline-block;
+    height: auto;
+    margin-top: 0px !important;
+    min-width: 250px;
+    padding: 8px 10px;
+    position: absolute;
+    width: auto;
+    z-index: 1000;
+    margin-left: -100px;
+    left: 50%;
+}
+
+#pmp_themes #messageNotifyFailure { 
+    background-color: #FF6A6A; border-radius: 0 0 3px 3px; color: #ffffff; display: inline-block; height: auto; min-width: 250px; padding: 8px 10px; width: auto; z-index: 1000; position: absolute; top: 0%; left: 50%; margin-left: -100px;margin-top: 0px ! important;
+}
+
+#pageTitleIcon{
+  margin-top: 10px !important;
+    margin-right: 10px !important;
+}
+/*SSL And SSH Main Side Menu Start*/
+.pki_treeViewDiv {
+  Position:relative  ! important;
+}
+
+#KMP_PMPDiv .pinicon 
+{
+	position: relative ! important;
+	z-index: 1;
+}
+
+#KMP_PMPDiv a.list-group-item.seclvlmenu {
+  width: 258px !important;
+   margin-left: 0;
+   padding-left:30px;
+}
+
+#KMP_PMPDiv .piniconSelected {
+    position: relative;
+    z-index: 1;
+}
+/*SSL And SSH Main Side Menu End*/
+
+/**Breadcrumb styles starts**/
+.pmp_ltpurple .pgtitle a{color:#9c27b0}
+.pmp_ltblue .pgtitle a{color:#039BE5}
+.pmp_turgreen .pgtitle a{color:#1abc9c}
+.pmp_yellow .pgtitle a{color:#ffa800}
+.pmp_ltred .pgtitle a{color:#ef5350}
+.pmp_black .pgtitle a{color:#36404a}
+
+.pmp_purple .pgtitle a{color:#5b4ba0}
+.pmp_blue .pgtitle a{color:#2b79b9}
+.pmp_green .pgtitle a{color:#5b9f0e}
+.pmp_orange .pgtitle a{color:#ff6e2b}
+.pmp_merown .pgtitle a{color:#c12c2a}
+.pmp_urbanbrown .pgtitle a{color:#7d6b5c}
+/**Breadcrumb styles Ends**/
+
+/* .topband1 #Password_View_Div_Id .pgtitle{margin:-31px -23px 8px -19px !important} */
+#auditRightRep #chart{		
+    display : none !important;		
+}
+.ui-widget-header .ui-icon{
+    background-image: url(images/ui-icons_222222_256x240.png) !important;
+}
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
+    background-image: url(images/ui-icons_454545_256x240.png) !important;
+}
+
+#modal_main_dialog .form-group .col-sm-4{
+    margin-left: 0px !important;
+}
+ tr th{border-bottom: 1px solid #ebebeb;
+    color: #4a4a4a;
+   	font-weight:400;
+    padding: 10px 30px 10px;
+    text-align: left;}
+#tabs_container {
+	width: 100%;
+}
+#tabs_container ul.tabs {
+	list-style: none;
+	height: 33px;
+	margin: 10px 0 10px 0;
+	padding:0;
+}
+#tabs_container ul.tabs li {
+	float: left;
+}
+#tabs_container ul.tabs li a {
+	display: block;
+	/*border-left: 1px solid #e3e5e7;
+	border-top: 1px solid #e3e5e7;
+	border-right: 1px solid #e3e5e7;*/
+	margin-right: 2px;
+	text-decoration: none;
+	/*background-color: #efefef;*/
+	background-color: #fff;
+	margin:0px 15px;
+	line-height:30px;
+	color:#bababa;
+	text-transform:none;
+	
+}
+ #tabs_container ul.tabs li a:first-child{margin:-2px 15px 0 0;}
+#tabs_container ul.tabs li.active a {
+	
+	color:#222;
+	border-bottom:3px solid #10bc83;
+}
+#Ciphers .modal-dialog{
+	width: 600px !important;
+}
+#Ciphers #addCipher{
+	    height: 32px !important;
+    margin-left: 58px;
+}
+#Ciphers .buttn-action{
+	margin-left: -30px !important;
+}
+#cmdbtemplatetoDisp #pgtitle{
+	    padding: 0px !important;
+    margin: 0px !important;
+    background-color: #ffffff;
+    border-bottom: none !important;
+    font-size: 14px !important;
+    display:block !important;
+}
+#cmdbtemplatetoDisp #sdpserver{
+	overflow: auto;
+    max-height: 501px;	
+}
+
+.ui-jqgrid .ui-pager-control {
+    background: #fff;
+}
+
+.reportRightBut{float:right;padding-right:10px;}
+.reportRightIcon{font-size: 20px;padding-top: 5px;cursor: pointer;display:inline-block;vertical-align: middle;}
+.topband2 #dashbrd_filter {
+    top: 90px !important;
+}
+
+#Password_View_Div_Id #keysearchfield {margin-top: 5px}
+#Password_View_Div_Id #SpecificDevice-div .col-sm-4 {width: 285px;padding-left: 0;padding-bottom: 0}
+#Password_View_Div_Id #SpecificDevice-div .form-group {padding-top: 0}
+#Password_View_Div_Id #keysearchfield {margin-top: 5px}
+
+#Password_View_Div_Id #NEW_DOMAIN_TR .buttn {height: 26px;line-height: 10px;margin: 0 5px}
+#Password_View_Div_Id #NEW_DOMAIN_TR .col-sm-4 {width: auto !important}
+#NEW_DOMAIN_TR .col-sm-5 {width: auto}
+#NEW_DOMAIN_TR .buttn {height: 26px;line-height: 100%;margin: 0 2px}
+#cert_details .col-sm-5{width:auto}
+#ouFrontBackDiv{width:100%;display:block}
+#goToDiv {width: 100% !important; display: block;text-align: center;margin: 10px 0 0 0}
+#aduser_div .col-sm-5 { width: auto !important;
+}
+#kmpadouList #usergroups { padding-top: 0;
+}
+#field_label_closer {
+    width:225px !important;
+}
+#addscheduleformdiv #field_label_closer {
+    width:270px !important;
+}
+
+.removePadGroup {
+            padding-top: 1px !important;
+}
+#CertDeployment input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button !important;
+  cursor: pointer;
+  margin-right: 0px !important;
+  box-sizing: border-box !important;
+}
+
+#adDiscImportButtn {
+    margin-left:225px !important;
+}
+#adDiscUsergroupTitleDiv{
+    margin: 0 0px !important;
+}
+
+#ADOulist_Div #kmpadouList .logViewer{
+    width: 729px !important;
+}
+.textrt{text-align:right}.textlf{text-align:left}.textcenter{text-align:center}
+
+/*=======================Columns=====================*/
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+.col-md-2 {
+    width: 16.66666667%;
+}
+.col-md-3 {
+    width: 25%;
+}
+.col-md-4 {
+    width: 33.33333333%;
+}
+.col-md-6 {
+    width: 50%;
+}
+.col-md-8 {
+    width: 66.66666667%;
+}
